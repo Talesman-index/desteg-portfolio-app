@@ -8,8 +8,16 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuVariants = {
-    closed: { opacity: 0, x: "100%", transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
-    open: { opacity: 1, x: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } }
+    closed: { 
+      opacity: 0, 
+      x: "100%", 
+      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as any as any } 
+    },
+    open: { 
+      opacity: 1, 
+      x: 0, 
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any as any } 
+    }
   };
 
   const linkVariants = {
@@ -17,7 +25,7 @@ export default function Navbar() {
     open: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: 0.3 + i * 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }
+      transition: { delay: 0.4 + i * 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] as any as any }
     })
   };
 

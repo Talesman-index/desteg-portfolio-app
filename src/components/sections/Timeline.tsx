@@ -31,7 +31,7 @@ const itemVariants = {
     transition: {
       duration: 0.6,
       delay: i * 0.12,
-      ease: [0.16, 1, 0.3, 1],
+      ease: [0.16, 1, 0.3, 1] as any,
     }
   })
 };
@@ -77,7 +77,7 @@ export default function Timeline() {
         initial={{ opacity: 0, y: 20 }} 
         whileInView={{ opacity: 1, y: 0 }} 
         viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
         className="section-label m-0 mb-20"
       >
         Expérience

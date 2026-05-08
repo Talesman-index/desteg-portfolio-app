@@ -35,7 +35,7 @@ export default function Work() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.12 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: index * 0.1 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as any, delay: index * 0.1 }}
             className={`wcard ${project.gridClass}`}
             data-id={project.id}
             onClick={() => setSelectedProject(project)}

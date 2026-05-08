@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const ANIM = {
   duration: { fast: 0.3, base: 0.7, slow: 1.0 },
-  ease: [0.16, 1, 0.3, 1],
+  ease: [0.16, 1, 0.3, 1] as any,
   stagger: 0.08,
 } as const;
 
