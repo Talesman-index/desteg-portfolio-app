@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const stats = [
   { label: "Années d'exp.", value: "4", unit: "ans" },
+  { label: "Projets réalisés", value: "100+", unit: "références" },
   { label: "Agences", value: "3", unit: "structures" },
-  { label: "Clients freelance", value: "5+", unit: "projets" },
   { label: "Pays", value: "2", unit: "Bénin / Guinée" },
 ];
 
