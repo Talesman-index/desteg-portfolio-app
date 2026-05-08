@@ -5,11 +5,11 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const projects = [
-  { id: "01", title: "Branding Indigo", category: "Identité visuelle", desc: "Direction artistique complète pour l'agence Indigo — Conakry. Identité visuelle, système graphique, déclinaisons print.", tags: ["Branding", "DA", "2025"], year: "2025", image: "/visuels/INDIGO/DÉROULANT.jpg", gridClass: "card-a" },
-  { id: "02", title: "Campagne Présidentielle", category: "Communication", desc: "Campagne de communication stratégique, affichage et réseaux sociaux.", tags: ["Campagne", "Print", "2024"], year: "2024", image: "/visuels/CAMPAGNE PRÉSIDENTIELLE/ENTRÉÉ-01.jpg", gridClass: "card-b" },
-  { id: "03", title: "Campagne Carrefour", category: "Publicité", desc: "Campagne publicitaire et habillage pour Carrefour. Concept, direction artistique et déclinaison.", tags: ["Print", "Publicité", "2023"], year: "2023", image: "/visuels/CARREFOUR /VISUEL.jpg", gridClass: "card-c" },
-  { id: "04", title: "Affiche Freeze", category: "Print", desc: "Création d'affiche promotionnelle et visuels d'annonce de concert.", tags: ["Print", "DA", "2024"], year: "2024", image: "/visuels/FREEZE CORLEONE/FREEZE ANNONCE.jpg", gridClass: "card-d" },
-  { id: "05", title: "Logo Miss Guinée", category: "Branding", desc: "Création de l'identité visuelle et du logotype pour le comité Miss Guinée.", tags: ["Logo", "Branding", "2023"], year: "2023", image: "/visuels/LOGO/LOGO MISS GUINÉE_Plan de travail 1.jpg", gridClass: "card-e" },
+  { id: "01", title: "Branding Indigo", category: "Identité visuelle", desc: "Direction artistique complète pour l'agence Indigo — Conakry. Identité visuelle, système graphique, déclinaisons print.", tags: ["Branding", "DA", "2025"], year: "2025", image: "/visuels/indigo/deroulant.jpg", gridClass: "card-a" },
+  { id: "02", title: "Campagne Présidentielle", category: "Communication", desc: "Campagne de communication stratégique, affichage et réseaux sociaux.", tags: ["Campagne", "Print", "2024"], year: "2024", image: "/visuels/campagne-presidentielle/entree-01.jpg", gridClass: "card-b" },
+  { id: "03", title: "Campagne Carrefour", category: "Publicité", desc: "Campagne publicitaire et habillage pour Carrefour. Concept, direction artistique et déclinaison.", tags: ["Print", "Publicité", "2023"], year: "2023", image: "/visuels/carrefour-/visuel.jpg", gridClass: "card-c" },
+  { id: "04", title: "Affiche Freeze", category: "Print", desc: "Création d'affiche promotionnelle et visuels d'annonce de concert.", tags: ["Print", "DA", "2024"], year: "2024", image: "/visuels/freeze-corleone/freeze-annonce.jpg", gridClass: "card-d" },
+  { id: "05", title: "Logo Miss Guinée", category: "Branding", desc: "Création de l'identité visuelle et du logotype pour le comité Miss Guinée.", tags: ["Logo", "Branding", "2023"], year: "2023", image: "/visuels/logo/logo-miss-guinee_plan-de-travail-1.jpg", gridClass: "card-e" },
 ];
 
 export default function Work() {
