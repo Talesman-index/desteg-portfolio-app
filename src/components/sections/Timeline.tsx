@@ -24,7 +24,7 @@ const experiences = [
   },
 ];
 
-const itemVariants = {
+const itemVariants: any = {
   hidden: { opacity: 0, x: -16 },
   visible: (i: number) => ({
     opacity: 1, x: 0,
@@ -36,7 +36,7 @@ const itemVariants = {
   })
 };
 
-const dotVariants = {
+const dotVariants: any = {
   hidden: { scale: 0.6 },
   visible: (i: number) => ({
     scale: 1,
@@ -48,7 +48,7 @@ const dotVariants = {
   })
 };
 
-const textVariants = {
+const textVariants: any = {
   hidden: { opacity: 0, y: 8 },
   visible: (i: number) => ({
     opacity: 1, y: 0,
