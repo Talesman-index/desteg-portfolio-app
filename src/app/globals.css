@@ -64,17 +64,36 @@ h1, h2, h3, h4, h5, h6 {
 .hero-name {
   font-family: var(--font-syne), sans-serif;
   font-weight: 800;
-  font-size: clamp(32px, 15vw, 130px);
-  line-height: 0.88;
-  letter-spacing: -0.04em;
+  font-size: clamp(28px, 9.5vw, 180px);
+  line-height: 0.85;
+  letter-spacing: -0.05em;
   text-transform: uppercase;
   color: var(--paper);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.hero-name div {
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 @media (min-width: 768px) {
-  .hero-name .line2 {
+  .hero-name .line2 span {
     -webkit-text-stroke: 1.5px rgba(242, 239, 233, 0.4);
     color: transparent;
+    transition: color 0.4s ease, -webkit-text-stroke 0.4s ease;
+  }
+  
+  .hero-name:hover .line2 span {
+    color: var(--acid);
+    -webkit-text-stroke: 1.5px var(--acid);
   }
 }
 

@@ -19,23 +19,42 @@ export default function Hero() {
       </div>
       <div className="hero-line hidden md:block" />
 
-      <div className="z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: ANIM.duration.base, delay: 0.35, ease: ANIM.ease }}
-          className="hero-name"
-        >
-          <div className="line1">DESTEG</div>
-          <div className="line2">AHISSOU</div>
-        </motion.div>
+      <div className="z-10 flex flex-col items-center text-center">
+        <div className="hero-name w-full overflow-hidden">
+          <div className="line1 flex justify-center">
+            {"DESTEG".split("").map((char, i) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: ANIM.duration.slow, delay: 0.2 + i * 0.06, ease: ANIM.ease }}
+                className="inline-block"
+              >
+                {char}
+              </motion.span>
+            ))}
+          </div>
+          <div className="line2 flex justify-center">
+            {"AHISSOU".split("").map((char, i) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: ANIM.duration.slow, delay: 0.4 + i * 0.06, ease: ANIM.ease }}
+                className="inline-block"
+              >
+                {char}
+              </motion.span>
+            ))}
+          </div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 items-end">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 items-end w-full">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: ANIM.duration.base, delay: 0.7, ease: ANIM.ease }}
-            className="max-w-[340px]"
+            className="max-w-[400px] mx-auto md:mx-0 md:text-left"
           >
             <p className="text-acid text-[12px] md:text-[13px] leading-[1.8] uppercase font-[var(--font-space-mono)]">
               Graphic Designer & Art Director. Je conçois des visuels impactants alliant stratégie et exigence.
@@ -46,7 +65,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: ANIM.duration.base, delay: 0.7, ease: ANIM.ease }}
-            className="flex md:justify-end items-center gap-5"
+            className="flex flex-col md:flex-row md:justify-end items-center gap-5"
           >
             <span className="text-[13px] uppercase tracking-[0.15em]">Cotonou / Conakry</span>
             <div className="flex items-center gap-2 px-3 py-1 border border-paper/10">
