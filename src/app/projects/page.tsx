@@ -256,6 +256,14 @@ export default function ProjectsPage() {
 }
 
 const allVisuals = [
+  { src: "/visuels/independance/agl-main.jpg", type: "Campagne" },
+  { src: "/visuels/independance/decoup-3d-logo.jpg", type: "Visual" },
+  { src: "/visuels/independance/photo-realisation-1.jpg", type: "Campagne" },
+  { src: "/visuels/independance/photo-realisation-2.jpg", type: "Campagne" },
+  { src: "/visuels/independance/agl-plan-1.jpg", type: "Print" },
+  { src: "/visuels/independance/agl-plan-2.jpg", type: "Print" },
+  { src: "/visuels/independance/agl-plan-3.jpg", type: "Print" },
+  { src: "/visuels/independance/agl-plan-4.jpg", type: "Print" },
   { src: "/visuels/odysee/presentation_.jpg", type: "Print" },
   { src: "/visuels/odysee/invite.jpg", type: "Print" },
   { src: "/visuels/odysee/odysse.jpg", type: "Print" },

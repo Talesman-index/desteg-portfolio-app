@@ -21,6 +21,27 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: "independance",
+    title: "Indépendance Guinée — AGL",
+    category: "Scénographie 3D & Campagne Nationale",
+    categoryKey: "campagnes",
+    client: "Africa Global Logistics (AGL)",
+    year: "2024",
+    desc: "Direction artistique et conception de la scénographie commémorative pour l'Indépendance de la Guinée. Découpe 3D du logo monumental, habillage événementiel de site et visuels d'affichage d'envergure.",
+    image: "/visuels/independance/agl-main.jpg",
+    tags: ["Scénographie 3D", "Événementiel", "AGL", "Campagne Nationale"],
+    gallery: [
+      "/visuels/independance/agl-main.jpg",
+      "/visuels/independance/decoup-3d-logo.jpg",
+      "/visuels/independance/photo-realisation-1.jpg",
+      "/visuels/independance/photo-realisation-2.jpg",
+      "/visuels/independance/agl-plan-1.jpg",
+      "/visuels/independance/agl-plan-2.jpg",
+      "/visuels/independance/agl-plan-3.jpg",
+      "/visuels/independance/agl-plan-4.jpg"
+    ]
+  },
+  {
     id: "miss-guinee",
     title: "Miss Guinée",
     category: "Identité de Marque & Événementiel",
