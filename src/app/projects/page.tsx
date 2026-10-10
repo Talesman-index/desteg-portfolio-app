@@ -3,14 +3,14 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-
-// ... (allVisuals array remains the same, I'll use a placeholder for brevety in thought but I must include the whole file since I'm using replace_file_content)
-// I will fetch the file content to ensure I have all the visuals.
-// Actually, I just read it, I have it in context.
+import Logo from "@/components/Logo";
+import { useTheme } from "@/components/ThemeProvider";
+import { CloseIcon, SunIcon, MoonIcon } from "@/components/Icons";
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState("Tous");
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const { theme, toggleTheme } = useTheme();
   
   const categories = ["Tous", "Campagne", "Visual", "Print", "Édition", "Logo"];
   
@@ -41,77 +41,146 @@ export default function ProjectsPage() {
   }, [selectedIndex, nextImage, prevImage]);
 
   return (
-    <main className="bg-ink selection:bg-acid selection:text-ink min-h-screen">
-      <header className="fixed top-0 left-0 w-full p-6 md:px-20 z-50 mix-blend-difference flex items-center justify-between">
-        <Link href="/" className="text-[12px] font-[var(--font-space-mono)] uppercase tracking-widest text-paper hover:text-acid transition-colors">
-          ← Retour à l'accueil
-        </Link>
-        <div className="font-[var(--font-syne)] font-bold text-paper text-[14px]">
-          ARCHIVES
+    <main className="bg-[var(--background)] bg-grid-pattern selection:bg-[#7C3AED] dark:selection:bg-[#8B5CF6] selection:text-white min-h-screen text-[var(--foreground)] transition-colors duration-300">
+      <header className="fixed top-0 left-0 w-full p-4 sm:p-6 md:px-16 z-50 bg-[#F8F8FC]/85 dark:bg-[#0B0B14]/85 backdrop-blur-xl border-b border-black/[0.06] dark:border-white/10 flex items-center justify-between transition-colors duration-300">
+        <div className="flex items-center gap-4 sm:gap-6">
+          <Link href="/" className="text-xs font-semibold uppercase tracking-wider text-[#57556E] dark:text-white/70 hover:text-[#7C3AED] dark:hover:text-[#8B5CF6] transition-colors flex items-center gap-1.5">
+            <span>←</span>
+            <span>Studio</span>
+          </Link>
+          <div className="hidden sm:block border-l border-black/10 dark:border-white/10 pl-4">
+            <Logo size="sm" />
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3">
+          {/* Theme Toggle Button */}
+          <button
+            onClick={toggleTheme}
+            aria-label="Basculer le thème"
+            className="flex items-center justify-center w-8 h-8 rounded-full border border-black/10 dark:border-white/10 bg-black/[0.03] dark:bg-white/5 text-[#57556E] dark:text-[#8888A4] hover:text-[#7C3AED] dark:hover:text-[#8B5CF6] transition-all cursor-pointer"
+          >
+            {theme === "dark" ? <SunIcon size={14} /> : <MoonIcon size={14} />}
+          </button>
+
+          <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#7C3AED]/10 dark:bg-[#8B5CF6]/15 border border-[#7C3AED]/25 dark:border-[#8B5CF6]/30">
+            <span className="w-2 h-2 rounded-full bg-[#7C3AED] dark:bg-[#8B5CF6] animate-pulse" />
+            <span className="font-bold text-[#7C3AED] dark:text-[#8B5CF6] text-[11px] uppercase tracking-wider">
+              Archives DA
+            </span>
+          </div>
         </div>
       </header>
 
-      <section className="pt-32 pb-20 px-6 md:px-20">
+      <section className="pt-28 sm:pt-36 pb-20 px-4 sm:px-6 md:px-16 max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-12"
+          className="relative mb-12 overflow-hidden rounded-3xl border border-black/[0.08] dark:border-[#8B5CF6]/20 bg-white/90 dark:bg-[#121124]/90 p-8 sm:p-12 backdrop-blur-2xl shadow-xl dark:shadow-2xl transition-colors duration-300"
         >
-          <h1 className="text-[clamp(40px,8vw,100px)] font-[var(--font-syne)] uppercase leading-none text-paper tracking-tighter">
-            Tous les <br/><span className="text-acid">Projets</span>
-          </h1>
-          <p className="mt-6 text-[14px] text-paper/40 font-[var(--font-space-mono)] max-w-lg">
-            Une collection étendue de directions artistiques, identités visuelles, créations print et concepts packaging.
-          </p>
+          {/* Subtle decorative glow orb in corner */}
+          <div className="pointer-events-none absolute -top-24 -right-24 w-72 h-72 rounded-full bg-[#7C3AED]/10 dark:bg-[#8B5CF6]/15 blur-[80px]" aria-hidden="true" />
+
+          <div className="relative z-10 max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#7C3AED]/10 dark:bg-[#8B5CF6]/15 border border-[#7C3AED]/25 dark:border-[#8B5CF6]/30 rounded-full text-[10px] font-bold uppercase tracking-widest text-[#7C3AED] dark:text-[#8B5CF6] mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] dark:bg-[#8B5CF6] animate-pulse" />
+              <span>CATALOGUE & RÉTROSPECTIVE</span>
+            </div>
+            <h1 className="text-[clamp(34px,7vw,84px)] font-black uppercase leading-[0.95] text-[#11111B] dark:text-white tracking-tight transition-colors">
+              Toutes les <br/>
+              <span className="gradient-violet">
+                Créations
+              </span>
+            </h1>
+            <p className="mt-5 text-[14px] sm:text-[15px] text-[#57556E] dark:text-white/70 max-w-xl leading-relaxed transition-colors">
+              Exploration exhaustive des directions artistiques, identités visuelles, packaging, affichages grand format et créations libres conçues par Desteg Ahissou.
+            </p>
+          </div>
         </motion.div>
 
         {/* Filter Bar */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-wrap gap-3 mb-16"
+          transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-wrap gap-2.5 mb-14"
         >
-          {categories.map(cat => (
-            <button
-              key={cat}
-              onClick={() => {
-                setFilter(cat);
-                setSelectedIndex(null);
-              }}
-              className={`px-6 py-2 rounded-full border text-[11px] font-[var(--font-space-mono)] uppercase tracking-widest transition-all duration-300 ${
-                filter === cat 
-                  ? 'bg-acid text-ink border-acid shadow-[0_0_15px_rgba(232,255,0,0.4)]' 
-                  : 'bg-transparent text-paper/60 border-paper/10 hover:border-acid/50 hover:text-acid'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+          {categories.map(cat => {
+            const isActive = filter === cat;
+            return (
+              <motion.button
+                key={cat}
+                onClick={() => {
+                  setFilter(cat);
+                  setSelectedIndex(null);
+                }}
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.96, y: 1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                className={`relative overflow-hidden px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer select-none flex items-center gap-2 ${
+                  isActive 
+                    ? 'text-white bg-gradient-to-r from-[#7C3AED] via-[#8B5CF6] to-[#7C3AED] border-t border-white/45 border-b border-black/35 shadow-[0_8px_25px_rgba(124,58,237,0.5),inset_0_1px_1px_rgba(255,255,255,0.6)]' 
+                    : 'bg-white/90 dark:bg-[#16152B]/85 text-[#57556E] dark:text-white/70 border border-black/10 dark:border-white/12 hover:border-[#7C3AED]/40 dark:hover:border-[#8B5CF6]/40 hover:text-[#11111B] dark:hover:text-white shadow-sm backdrop-blur-md'
+                }`}
+              >
+                {/* 3D Top Bevel Glint */}
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+
+                {/* Laser Shimmer Sweep (Continuous on active) */}
+                <motion.div
+                  className="pointer-events-none absolute inset-0 -skew-x-12"
+                  animate={isActive ? { x: ["-140%", "160%"] } : {}}
+                  transition={{
+                    repeat: Infinity,
+                    repeatDelay: 2.2,
+                    duration: 1.25,
+                    ease: "easeInOut",
+                  }}
+                  style={{
+                    background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent)",
+                  }}
+                />
+
+                {/* Pulsing Active Indicator Dot */}
+                {isActive && (
+                  <span className="relative flex h-2 w-2 items-center justify-center shrink-0">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
+                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white" />
+                  </span>
+                )}
+
+                <span className="relative z-10">{cat}</span>
+              </motion.button>
+            );
+          })}
         </motion.div>
 
+        {/* Visuals Masonry Column Grid */}
         <motion.div layout className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6">
           <AnimatePresence mode="popLayout">
             {filteredVisuals.map((item, index) => (
               <motion.div
                 layout
                 key={item.src}
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="break-inside-avoid relative group overflow-hidden bg-mid border border-paper/5 inline-block w-full mb-6 cursor-zoom-in"
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                className="break-inside-avoid relative group overflow-hidden bg-white dark:bg-[#16152B]/90 border border-black/[0.08] dark:border-white/10 hover:border-[#7C3AED]/50 dark:hover:border-[#8B5CF6]/50 rounded-2xl inline-block w-full mb-6 cursor-zoom-in shadow-md hover:shadow-xl dark:shadow-xl dark:hover:shadow-[0_20px_45px_rgba(139,92,246,0.2)] transition-all duration-300"
                 onClick={() => setSelectedIndex(index)}
               >
+                {/* Top subtle glare line */}
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent z-10" />
+
                 <img 
                   src={item.src} 
                   alt={`Visual ${index}`} 
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <span className="text-acid font-[var(--font-space-mono)] text-[11px] uppercase tracking-widest border border-acid/20 bg-ink/80 px-3 py-1 backdrop-blur-md">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span className="text-white text-[10px] font-bold uppercase tracking-widest bg-[#7C3AED] dark:bg-[#8B5CF6] px-3 py-1 rounded-full shadow-md">
                     {item.type}
                   </span>
                 </div>
@@ -128,52 +197,53 @@ export default function ProjectsPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/98 backdrop-blur-xl"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 sm:p-8"
           >
             <button 
               onClick={() => setSelectedIndex(null)}
-              className="absolute top-8 right-8 z-[110] text-paper/50 hover:text-acid transition-colors"
+              className="absolute top-6 right-6 z-[110] w-11 h-11 rounded-full bg-white/10 hover:bg-[#8B5CF6] text-white flex items-center justify-center transition-all duration-200 border-t border-white/30 border-b border-black/30 shadow-[0_6px_18px_rgba(0,0,0,0.4)] active:scale-95 active:translate-y-0.5 cursor-pointer backdrop-blur-md"
+              aria-label="Fermer"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M18 6L6 18M6 6l12 12" />
-              </svg>
+              <CloseIcon size={16} />
             </button>
 
             {/* Navigation Buttons */}
-            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-4 md:px-10 z-[110] pointer-events-none">
+            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-4 md:px-8 z-[110] pointer-events-none">
               <button 
                 onClick={(e) => { e.stopPropagation(); prevImage(); }}
-                className="p-4 bg-paper/5 hover:bg-acid hover:text-ink text-paper rounded-full transition-all pointer-events-auto backdrop-blur-md border border-paper/10"
+                className="w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-[#8B5CF6] text-white rounded-full transition-all duration-200 pointer-events-auto backdrop-blur-md border-t border-white/30 border-b border-black/40 shadow-[0_8px_20px_rgba(0,0,0,0.5)] active:scale-95 active:translate-y-0.5 cursor-pointer"
+                aria-label="Précédent"
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M15 18l-6-6 6-6" />
                 </svg>
               </button>
               <button 
                 onClick={(e) => { e.stopPropagation(); nextImage(); }}
-                className="p-4 bg-paper/5 hover:bg-acid hover:text-ink text-paper rounded-full transition-all pointer-events-auto backdrop-blur-md border border-paper/10"
+                className="w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-[#8B5CF6] text-white rounded-full transition-all duration-200 pointer-events-auto backdrop-blur-md border-t border-white/30 border-b border-black/40 shadow-[0_8px_20px_rgba(0,0,0,0.5)] active:scale-95 active:translate-y-0.5 cursor-pointer"
+                aria-label="Suivant"
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9 18l6-6-6-6" />
                 </svg>
               </button>
             </div>
 
-            <div className="w-full h-full flex flex-col items-center justify-center p-6 md:p-20 relative">
+            <div className="w-full h-full flex flex-col items-center justify-center p-4 sm:p-12 relative">
               <motion.img
                 key={filteredVisuals[selectedIndex].src}
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                 src={filteredVisuals[selectedIndex].src}
-                className="max-w-full max-h-full object-contain shadow-2xl"
+                className="max-w-full max-h-[82vh] object-contain rounded-lg shadow-2xl border border-white/15"
               />
               
-              <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-                <span className="text-acid font-[var(--font-space-mono)] text-[11px] uppercase tracking-[0.3em]">
+              <div className="mt-4 flex items-center gap-4">
+                <span className="text-[#8B5CF6] font-bold text-[11px] uppercase tracking-widest bg-white/5 border border-white/10 px-3 py-1 rounded">
                   {filteredVisuals[selectedIndex].type}
                 </span>
-                <span className="text-paper/20 text-[10px] font-[var(--font-space-mono)]">
+                <span className="text-white/40 text-[11px]">
                   {selectedIndex + 1} / {filteredVisuals.length}
                 </span>
               </div>
