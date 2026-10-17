@@ -55,7 +55,7 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className="relative text-[15px] font-semibold text-[#11111B] dark:text-[#8888A4] hover:text-[#7C3AED] dark:hover:text-white transition-colors group py-1"
+                className="relative text-[15px] font-semibold text-[#11111B] dark:text-[#E2E8F0] hover:text-[#7C3AED] dark:hover:text-white transition-colors group py-1"
               >
                 <span>{link.label}</span>
                 <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-[#7C3AED] dark:bg-[#8B5CF6] transition-all duration-300 group-hover:w-full" />
@@ -163,7 +163,7 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-2xl font-bold text-[#57556E] dark:text-[#8888A4] hover:text-[#11111B] dark:hover:text-white transition-colors"
+                  className="text-2xl font-bold text-[#11111B] dark:text-[#E2E8F0] hover:text-[#7C3AED] dark:hover:text-white transition-colors"
                 >
                   {link.label}
                 </a>
@@ -171,7 +171,7 @@ export default function Navbar() {
               <Link
                 href="/projects"
                 onClick={() => setIsOpen(false)}
-                className="text-2xl font-bold text-[#57556E] dark:text-[#8888A4] hover:text-[#11111B] dark:hover:text-white transition-colors"
+                className="text-2xl font-bold text-[#11111B] dark:text-[#E2E8F0] hover:text-[#7C3AED] dark:hover:text-white transition-colors"
               >
                 Archives visuelles
               </Link>

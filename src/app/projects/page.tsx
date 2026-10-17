@@ -12,7 +12,7 @@ export default function ProjectsPage() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const { theme, toggleTheme } = useTheme();
   
-  const categories = ["Tous", "Campagne", "Visual", "Print", "Édition", "Logo"];
+  const categories = ["Tous", "Campagne", "Visual", "Packaging", "Print", "Édition", "Logo"];
   
   const filteredVisuals = filter === "Tous" 
     ? allVisuals 
@@ -121,7 +121,7 @@ export default function ProjectsPage() {
                 className={`relative overflow-hidden px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer select-none flex items-center gap-2 ${
                   isActive 
                     ? 'text-white bg-gradient-to-r from-[#7C3AED] via-[#8B5CF6] to-[#7C3AED] border-t border-white/45 border-b border-black/35 shadow-[0_8px_25px_rgba(124,58,237,0.5),inset_0_1px_1px_rgba(255,255,255,0.6)]' 
-                    : 'bg-white/90 dark:bg-[#16152B]/85 text-[#57556E] dark:text-white/70 border border-black/10 dark:border-white/12 hover:border-[#7C3AED]/40 dark:hover:border-[#8B5CF6]/40 hover:text-[#11111B] dark:hover:text-white shadow-sm backdrop-blur-md'
+                    : 'bg-white/95 dark:bg-[#1E1C38] text-[#11111B] dark:text-white border border-black/15 dark:border-white/20 hover:border-[#7C3AED]/60 dark:hover:border-[#8B5CF6]/60 hover:text-[#7C3AED] dark:hover:text-[#A78BFA] shadow-xs backdrop-blur-md'
                 }`}
               >
                 {/* 3D Top Bevel Glint */}
@@ -256,10 +256,11 @@ export default function ProjectsPage() {
 }
 
 const allVisuals = [
+  { src: "/visuels/independance/decoup-3d-logo.png", type: "Logo" },
+  { src: "/visuels/independance/photo-realisation-1.jpg", type: "Visual" },
+  { src: "/visuels/independance/photo-realisation-2.jpg", type: "Visual" },
   { src: "/visuels/independance/agl-main.jpg", type: "Campagne" },
   { src: "/visuels/independance/decoup-3d-logo.jpg", type: "Visual" },
-  { src: "/visuels/independance/photo-realisation-1.jpg", type: "Campagne" },
-  { src: "/visuels/independance/photo-realisation-2.jpg", type: "Campagne" },
   { src: "/visuels/independance/agl-plan-1.jpg", type: "Print" },
   { src: "/visuels/independance/agl-plan-2.jpg", type: "Print" },
   { src: "/visuels/independance/agl-plan-3.jpg", type: "Print" },
@@ -269,7 +270,6 @@ const allVisuals = [
   { src: "/visuels/odysee/odysse.jpg", type: "Print" },
   { src: "/visuels/odysee/partenaires-sponsors.jpg", type: "Print" },
   { src: "/visuels/campagne-presidentielle/entree-01.jpg", type: "Campagne" },
-  { src: "/visuels/campagne-presidentielle/entree-03.jpg", type: "Campagne" },
   { src: "/visuels/campagne-presidentielle/totem-copie-02.jpg", type: "Campagne" },
   { src: "/visuels/campagne-presidentielle/totem-copie-03.jpg", type: "Campagne" },
   { src: "/visuels/campagne-presidentielle/totem-copie-01.jpg", type: "Campagne" },
@@ -285,17 +285,9 @@ const allVisuals = [
   { src: "/visuels/carrefour-/visuel.jpg", type: "Campagne" },
   { src: "/visuels/carrefour-/400cmx300cm.jpg", type: "Campagne" },
   { src: "/visuels/carrefour-/102cm-x-171-cm_.jpg", type: "Campagne" },
-  { src: "/visuels/carrefour-/300cmx-400cm.jpg", type: "Campagne" },
   { src: "/visuels/carrefour-/400cmx300cm-2.jpg", type: "Campagne" },
   { src: "/visuels/carrefour-/revelation_plan-de-travail-1.jpg", type: "Campagne" },
-  { src: "/visuels/carrefour-/visuelle-3.jpg", type: "Campagne" },
-  { src: "/visuels/carrefour-/cheque-factis_plan-de-travail-1.jpg", type: "Campagne" },
-  { src: "/visuels/carrefour-/visuelle-2.jpg", type: "Campagne" },
   { src: "/visuels/carrefour-/700cm-x-150cm.jpg", type: "Campagne" },
-  { src: "/visuels/carrefour-/marchandise.jpg", type: "Campagne" },
-  { src: "/visuels/carrefour-/visuelle_.jpg", type: "Campagne" },
-  { src: "/visuels/carrefour-/visuel.2-psd.jpg", type: "Campagne" },
-  { src: "/visuels/carrefour-/votre-super-marche.jpg", type: "Campagne" },
   { src: "/visuels/carrefour-/suivez-nous.jpg", type: "Campagne" },
   { src: "/visuels/calendrier-cna/calendrier-mural_plan-de-travail-1.jpg", type: "Édition" },
   { src: "/visuels/calendrier-cna/calendrier-mural-2_plan-de-travail-1-copie.jpg", type: "Édition" },
@@ -305,13 +297,8 @@ const allVisuals = [
   { src: "/visuels/port-autonome-/42cm-x-60cm_plan-de-travail-1-copie-4.jpg", type: "Print" },
   { src: "/visuels/port-autonome-/42cm-x-60cm_plan-de-travail-1-copie-2.jpg", type: "Print" },
   { src: "/visuels/port-autonome-/42cm-x-60cm_plan-de-travail-1-copie-3.jpg", type: "Print" },
-  { src: "/visuels/indigo/panneau-deroulant.jpg", type: "Campagne" },
-  { src: "/visuels/indigo/panneau-sucette.jpg", type: "Campagne" },
   { src: "/visuels/indigo/facade-ramadan-3_.jpg", type: "Campagne" },
-  { src: "/visuels/indigo/sucette.jpg", type: "Campagne" },
   { src: "/visuels/indigo/facade-ramadan_plan-de-travail-1-copie-2.jpg", type: "Campagne" },
-  { src: "/visuels/indigo/deroulant.jpg", type: "Campagne" },
-  { src: "/visuels/indigo/grande-facade-la-rntree_.jpg", type: "Campagne" },
   { src: "/visuels/miss-guinnee/410x290cm.jpg", type: "Campagne" },
   { src: "/visuels/miss-guinnee/43x26cm.gbgjpg.jpg", type: "Campagne" },
   { src: "/visuels/miss-guinnee/dos-chapiteau-3145x1200-cm.jpg", type: "Campagne" },
@@ -330,7 +317,6 @@ const allVisuals = [
   { src: "/visuels/logo/meche.en.or.logo-02.jpg", type: "Logo" },
   { src: "/visuels/logo/logo-miss-guinee_plan-de-travail-1.jpg", type: "Logo" },
   { src: "/visuels/logo/logo-10.png", type: "Logo" },
-  { src: "/visuels/logo/logo-04.png", type: "Logo" },
   { src: "/visuels/logo/logo-11.png", type: "Logo" },
   { src: "/visuels/logo/logo-07.png", type: "Logo" },
   { src: "/visuels/logo/logo-06.png", type: "Logo" },
@@ -341,8 +327,6 @@ const allVisuals = [
   { src: "/visuels/ministere-de-lemploie/visuel-700x300.-mr-mohamed-origipsd-copie-2.jpg", type: "Campagne" },
   { src: "/visuels/ministere-de-lemploie/visuel-400x800.-mr-mohamed-origipsd-copie-2.jpg", type: "Campagne" },
   { src: "/visuels/ministere-de-lemploie/visuel-400x800.-origipsd-copie.jpg", type: "Campagne" },
-  { src: "/visuels/cge-gui/cge-gui-kakemono-banderole_plan-de-travail-1.jpg", type: "Édition" },
-  { src: "/visuels/cge-gui/cge-gui-kakemono-banderole-02.jpg", type: "Édition" },
   { src: "/visuels/visuels/sans-titre-4-03.png", type: "Visual" },
   { src: "/visuels/visuels/sans-titre-4-02.png", type: "Visual" },
   { src: "/visuels/visuels/sans-titre-4_plan-de-travail-1.png", type: "Visual" },
@@ -371,5 +355,60 @@ const allVisuals = [
   { src: "/visuels/visuels/heros.jpg", type: "Visual" },
   { src: "/visuels/visuels/real-getaf.jpg", type: "Visual" },
   { src: "/visuels/visuels/itachi.jpg", type: "Visual" },
-  { src: "/visuels/visuels/real-city.jpg", type: "Visual" }
+  { src: "/visuels/visuels/real-city.jpg", type: "Visual" },
+  // Nouveaux Projets Desteur
+  { src: "/visuels/campagne-presidentielle/pr-plan-de-travail-1-copie-8.jpg", type: "Campagne" },
+  { src: "/visuels/the-box/the-box-01.jpg", type: "Campagne" },
+  { src: "/visuels/the-box/whatsapp-image-2026-10-13-at-14-28-37.jpg", type: "Visual" },
+  { src: "/visuels/the-box/whatsapp-image-2026-10-13-at-14-28-38.jpg", type: "Visual" },
+  { src: "/visuels/the-box/whatsapp-image-2026-10-13-at-14-28-39.jpg", type: "Visual" },
+  { src: "/visuels/the-box/whatsapp-image-2026-10-13-at-14-28-39-1.jpg", type: "Visual" },
+  { src: "/visuels/the-box/italian-collection.jpg", type: "Print" },
+  { src: "/visuels/the-box/kakemono-led.jpg", type: "Campagne" },
+  { src: "/visuels/the-box/the-box-01v-01.jpg", type: "Campagne" },
+  { src: "/visuels/the-box/the-box-0s1-01.jpg", type: "Campagne" },
+  { src: "/visuels/the-box/the-box-j01-01.jpg", type: "Campagne" },
+  { src: "/visuels/the-box/the-box-01-1.jpg", type: "Campagne" },
+  { src: "/visuels/carrefour-/img-0526.jpg", type: "Campagne" },
+  { src: "/visuels/carrefour-/3o9a3410-jpg.jpg", type: "Campagne" },
+  { src: "/visuels/carrefour-/3o9a3431-jpg.jpg", type: "Campagne" },
+  { src: "/visuels/miss-guinnee/whatsapp-image-2026-10-13-at-15-47-01.jpg", type: "Visual" },
+  { src: "/visuels/miss-guinnee/whatsapp-image-2026-10-13-at-15-47-49.jpg", type: "Visual" },
+  { src: "/visuels/miss-guinnee/whatsapp-image-2026-10-13-at-15-48-20.jpg", type: "Visual" },
+  { src: "/visuels/bisikuiti/boite-2.jpg", type: "Packaging" },
+  { src: "/visuels/bisikuiti/boite-2s.jpg", type: "Packaging" },
+  { src: "/visuels/bisikuiti/bisikuiti-8-mars-plan-de-travail-1.png", type: "Packaging" },
+  { src: "/visuels/bisikuiti/patron-biskuiti-2-plan-de-travail-1.png", type: "Packaging" },
+  { src: "/visuels/bisikuiti/affiche-de-porte-77-sur-166.jpg", type: "Packaging" },
+  { src: "/visuels/bisikuiti/bache2.jpg", type: "Packaging" },
+  { src: "/visuels/bisikuiti/bisik.jpg", type: "Packaging" },
+  { src: "/visuels/bisikuiti/joyeuse-saint-valentin.jpg", type: "Packaging" },
+  { src: "/visuels/bisikuiti/bisi.jpg", type: "Packaging" },
+  { src: "/visuels/bisikuiti/chocolat-pack.jpg", type: "Packaging" },
+  { src: "/visuels/bisikuiti/cajoux-pack.jpg", type: "Packaging" },
+  { src: "/visuels/bisikuiti/cc.jpg", type: "Packaging" },
+  { src: "/visuels/desteur-juice/desteur-juice-visuel-1-ananas-pasteque.jpg", type: "Packaging" },
+  { src: "/visuels/desteur-juice/desteur-juice-visuel2-ananas-pasteque.jpg", type: "Packaging" },
+  { src: "/visuels/desteur-juice/logo-plan-de-travail-2-plan-de-travail-1.jpg", type: "Logo" },
+  { src: "/visuels/desteur-juice/ananas-2.jpg", type: "Packaging" },
+  { src: "/visuels/desteur-juice/vin-de-palme-3.jpg", type: "Packaging" },
+  { src: "/visuels/desteur-juice/plan-de-travail-1.jpg", type: "Packaging" },
+  { src: "/visuels/desteur-juice/plan-de-travail-2.jpg", type: "Packaging" },
+  { src: "/visuels/desteur-juice/plan-de-travail-3.jpg", type: "Packaging" },
+  { src: "/visuels/desteur-juice/plan-de-travail-4.jpg", type: "Packaging" },
+  { src: "/visuels/desteur-juice/plan-de-travail-5.jpg", type: "Packaging" },
+  { src: "/visuels/desteur-juice/plan-de-travail-6.jpg", type: "Packaging" },
+  { src: "/visuels/bureau-veritas/600cmx300cm-01.jpg", type: "Campagne" },
+  { src: "/visuels/bureau-veritas/360cmx360cm-01.jpg", type: "Campagne" },
+  { src: "/visuels/bureau-veritas/80cmx200cm-01.jpg", type: "Campagne" },
+  { src: "/visuels/bureau-veritas/sans-titre-2-01.jpg", type: "Campagne" },
+  { src: "/visuels/union-europeenne/union-europeenne-copie-01.jpg", type: "Campagne" },
+  { src: "/visuels/union-europeenne/union-europeenne-copie-0w1-01.jpg", type: "Campagne" },
+  { src: "/visuels/1xbet/1xbet-guinee-01.jpg", type: "Campagne" },
+  { src: "/visuels/1xbet/bet-224-01.jpg", type: "Campagne" },
+  { src: "/visuels/suir-immobilier/totem-ai-plan-de-travail-1.jpg", type: "Print" },
+  { src: "/visuels/suir-immobilier/logo-plan-de-travail-1.jpg", type: "Logo" },
+  { src: "/visuels/suir-immobilier/whatsapp-image-2026-10-13-at-15-50-58.jpg", type: "Visual" },
+  { src: "/visuels/sabou-prod/logo-sabou-bleu.png", type: "Logo" },
+  { src: "/visuels/sabou-prod/logo-sabou-blanc.jpg", type: "Logo" }
 ];

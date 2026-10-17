@@ -21,15 +21,195 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: "presidentielle",
+    title: "Présidence de la République de Guinée",
+    category: "Communication Régilienne & Design d’État • Campagne & Identité Institutionnelle de la Présidence de la République de Guinée",
+    categoryKey: "campagnes",
+    client: "Présidence de la République de Guinée",
+    year: "2024",
+    desc: "Conception graphique, direction artistique des visuels de campagne et post-production des portraits officiels de la plus haute instance de l'État : le Président de la République de Guinée, le Général Mamadi Doumbouya. Ce projet de souveraineté nationale englobe à la fois la communication politique de grande diffusion et l'identité visuelle protocolaire de l'État guinéen.",
+    image: "/visuels/campagne-presidentielle/pr-plan-de-travail-1-copie-8.jpg",
+    tags: ["Communication Régilienne", "Design d'État", "Portraits Officiels", "Souveraineté", "Guinée"],
+    gallery: [
+      "/visuels/campagne-presidentielle/pr-plan-de-travail-1-copie-8.jpg",
+      "/visuels/campagne-presidentielle/entree-01.jpg",
+      "/visuels/campagne-presidentielle/totem-copie-01.jpg",
+      "/visuels/campagne-presidentielle/totem-copie-02.jpg",
+      "/visuels/campagne-presidentielle/totem-copie-03.jpg"
+    ]
+  },
+  {
+    id: "carrefour",
+    title: "Carrefour Market",
+    category: "Identité de Marque & Lancement • Ouverture de Carrefour Market (Conakry, Guinée)",
+    categoryKey: "packaging",
+    client: "Carrefour Market Guinée",
+    year: "2024",
+    desc: "Création de l'univers visuel et des supports de communication pour le lancement historique du tout premier supermarché Carrefour Market Guinee en République de Guinée. Un projet d'envergure marquant une nouvelle ère pour la grande distribution moderne et la valorisation du contenu local à Conakry.",
+    image: "/visuels/carrefour-/img-0526.jpg",
+    tags: ["Retail", "Lancement Historique", "Affichage Urbain", "Conakry", "PLV"],
+    gallery: [
+      "/visuels/carrefour-/img-0526.jpg",
+      "/visuels/carrefour-/3o9a3410-jpg.jpg",
+      "/visuels/carrefour-/3o9a3431-jpg.jpg",
+      "/visuels/carrefour-/visuel.jpg",
+      "/visuels/carrefour-/102cm-x-171-cm_.jpg",
+      "/visuels/carrefour-/suivez-nous.jpg",
+      "/visuels/carrefour-/400cmx300cm.jpg"
+    ]
+  },
+  {
+    id: "the-box",
+    title: "The Box Group",
+    category: "Scénographie & Branding de Stand • The Box Group (SADEN 2026, Conakry)",
+    categoryKey: "da",
+    client: "The Box Group — Hôtel Kaloum",
+    year: "2026",
+    desc: "Conception spatiale, design d'expérience et habillage graphique (branding) du stand d'exposition de The Box Group lors de la 5ᵉ édition du Salon des Entrepreneurs et de l'Emploi de Guinée (SADEN 2026), tenue à l'Hôtel Kaloum. L'événement s'est articulé autour du thème stratégique national : « Simandou 2040, l'heure des (T)PME ».",
+    image: "/visuels/the-box/the-box-01.jpg",
+    tags: ["Scénographie Stand", "SADEN 2026", "Hôtel Kaloum", "Simandou 2040", "Branding"],
+    gallery: [
+      "/visuels/the-box/the-box-01.jpg",
+      "/visuels/the-box/whatsapp-image-2026-10-13-at-14-28-37.jpg",
+      "/visuels/the-box/whatsapp-image-2026-10-13-at-14-28-38.jpg",
+      "/visuels/the-box/whatsapp-image-2026-10-13-at-14-28-39.jpg",
+      "/visuels/the-box/whatsapp-image-2026-10-13-at-14-28-39-1.jpg",
+      "/visuels/the-box/italian-collection.jpg",
+      "/visuels/the-box/kakemono-led.jpg",
+      "/visuels/the-box/the-box-01v-01.jpg",
+      "/visuels/the-box/the-box-0s1-01.jpg",
+      "/visuels/the-box/the-box-j01-01.jpg",
+      "/visuels/the-box/the-box-01-1.jpg"
+    ]
+  },
+  {
+    id: "logo-decoupe-68-ans",
+    title: "Logo Découpe « 68 ans de la Guinée »",
+    category: "Logotype & Identité de Marque • Logo Découpe « 68 ans d’Indépendance de la Guinée »",
+    categoryKey: "branding",
+    client: "République de Guinée",
+    year: "2024",
+    desc: "Conception du logotype commémoratif officiel des 68 ans d’Indépendance de la République de Guinée et modélisation pour découpe volumique 3D. Réalisation sur mesure en enseigne lumineuse rétroéclairée et habillage scénique monumental célébrant l'histoire, la jeunesse et les bâtisseurs de la nation.",
+    image: "/visuels/independance/photo-realisation-1.jpg",
+    tags: ["Logotype Officiel", "Découpe 3D", "Enseigne Lumineuse", "Identité Nationale", "Guinée"],
+    gallery: [
+      "/visuels/independance/decoup-3d-logo.png",
+      "/visuels/independance/photo-realisation-1.jpg",
+      "/visuels/independance/photo-realisation-2.jpg",
+      "/visuels/independance/decoup-3d-logo.jpg"
+    ]
+  },
+  {
+    id: "miss-guinee",
+    title: "Miss Guinée 2025",
+    category: "Identité de Marque & Événementiel",
+    categoryKey: "branding",
+    client: "Comité National Miss Guinée",
+    year: "2025",
+    desc: "Conception graphique et habillage visuel (branding) de l'espace pour l'édition de Miss Guinée 2025, déployé au prestigieux Chapiteau by Issa de Kipé à Conakry. Ce projet d’envergure nationale célèbre l’excellence, l'engagement culturel et le Branding National de la femme guinéenne.",
+    image: "/visuels/miss-guinnee/410x290cm.jpg",
+    tags: ["Logotype", "Branding Espace", "Chapiteau by Issa", "Événementiel", "Prestige"],
+    gallery: [
+      "/visuels/miss-guinnee/410x290cm.jpg",
+      "/visuels/miss-guinnee/whatsapp-image-2026-10-13-at-15-47-01.jpg",
+      "/visuels/miss-guinnee/whatsapp-image-2026-10-13-at-15-47-49.jpg",
+      "/visuels/miss-guinnee/whatsapp-image-2026-10-13-at-15-48-20.jpg",
+      "/visuels/miss-guinnee/43x26cm.jpg",
+      "/visuels/miss-guinnee/bache-candidates.jpg",
+      "/visuels/miss-guinnee/dos-chapiteau-3145x1200-cm.jpg"
+    ]
+  },
+  {
+    id: "bisikuiti",
+    title: "Bisikuiti Fabric",
+    category: "Packaging & Identité de Marque",
+    categoryKey: "packaging",
+    client: "Bisikuiti Fabric (Bénin)",
+    year: "2021–2025",
+    desc: "Bisikuiti Fabric est une entreprise béninoise de biscuiterie artisanale fondée le 20 mai 2021 par sa directrice et promotrice, Doris R. Adegnandjou Bide. L'entreprise se distingue par la valorisation des richesses agricoles locales à travers des recettes uniques et nutritives.",
+    image: "/visuels/bisikuiti/boite-2.jpg",
+    tags: ["Packaging", "Design Boîtes", "Agroalimentaire", "Édition Limitée", "Bénin"],
+    gallery: [
+      "/visuels/bisikuiti/boite-2.jpg",
+      "/visuels/bisikuiti/boite-2s.jpg",
+      "/visuels/bisikuiti/bisikuiti-8-mars-plan-de-travail-1.png",
+      "/visuels/bisikuiti/patron-biskuiti-2-plan-de-travail-1.png",
+      "/visuels/bisikuiti/affiche-de-porte-77-sur-166.jpg",
+      "/visuels/bisikuiti/bache2.jpg",
+      "/visuels/bisikuiti/bisik.jpg",
+      "/visuels/bisikuiti/joyeuse-saint-valentin.jpg",
+      "/visuels/bisikuiti/bisi.jpg",
+      "/visuels/bisikuiti/chocolat-pack.jpg",
+      "/visuels/bisikuiti/cajoux-pack.jpg",
+      "/visuels/bisikuiti/cc.jpg"
+    ]
+  },
+  {
+    id: "desteur-juice",
+    title: "Desteur Juice",
+    category: "Packaging & Stratégie de Marque",
+    categoryKey: "packaging",
+    client: "Desteur Juice",
+    year: "2024",
+    desc: "Création de l'identité de marque et de la stratégie de communication pour Desteur Juice, une marque dynamique spécialisée dans les jus de fruits naturels.",
+    image: "/visuels/desteur-juice/desteur-juice-visuel-1-ananas-pasteque.jpg",
+    tags: ["Branding", "Packaging Jus", "Identité Visuelle", "Stratégie"],
+    gallery: [
+      "/visuels/desteur-juice/desteur-juice-visuel-1-ananas-pasteque.jpg",
+      "/visuels/desteur-juice/desteur-juice-visuel2-ananas-pasteque.jpg",
+      "/visuels/desteur-juice/logo-plan-de-travail-2-plan-de-travail-1.jpg",
+      "/visuels/desteur-juice/ananas-2.jpg",
+      "/visuels/desteur-juice/vin-de-palme-3.jpg",
+      "/visuels/desteur-juice/plan-de-travail-1.jpg",
+      "/visuels/desteur-juice/plan-de-travail-2.jpg",
+      "/visuels/desteur-juice/plan-de-travail-3.jpg",
+      "/visuels/desteur-juice/plan-de-travail-4.jpg",
+      "/visuels/desteur-juice/plan-de-travail-5.jpg",
+      "/visuels/desteur-juice/plan-de-travail-6.jpg"
+    ]
+  },
+  {
+    id: "bureau-veritas",
+    title: "Bureau Veritas Guinée",
+    category: "Direction Artistique & Design • Célébration des Trust Makers (Bureau Veritas Guinée)",
+    categoryKey: "da",
+    client: "Bureau Veritas Guinée",
+    year: "2024",
+    desc: "Conception de l'identité visuelle et des supports de communication pour la célébration des « Trust Makers » de Bureau Veritas Guinée. Cet événement d'envergure honore les collaborateurs qui incarnent au quotidien la mission mondiale du groupe : « Shaping a World of Trust » (Bâtir un monde de confiance).",
+    image: "/visuels/bureau-veritas/600cmx300cm-01.jpg",
+    tags: ["Direction Artistique", "Trust Makers", "Corporate", "Shaping a World of Trust"],
+    gallery: [
+      "/visuels/bureau-veritas/600cmx300cm-01.jpg",
+      "/visuels/bureau-veritas/360cmx360cm-01.jpg",
+      "/visuels/bureau-veritas/80cmx200cm-01.jpg",
+      "/visuels/bureau-veritas/sans-titre-2-01.jpg"
+    ]
+  },
+  {
+    id: "union-europeenne",
+    title: "Union Européenne en Guinée",
+    category: "Identité Institutionnelle & Graphisme Événementiel • Délégation de l'Union européenne en Guinée",
+    categoryKey: "campagnes",
+    client: "Délégation de l'UE & Ministère de l'Environnement",
+    year: "2024",
+    desc: "Conception de la campagne visuelle et des supports de communication pour le programme d'action environnemental « Partenariat Guinée-UE pour la Nature et les Générations Futures ». Cette initiative de la Délégation de l’Union européenne en Guinée et du Ministère de l'Environnement vise à sensibiliser le public aux enjeux de la biodiversité, de la transition verte et du développement durable en République de Guinée.",
+    image: "/visuels/union-europeenne/union-europeenne-copie-01.jpg",
+    tags: ["Union Européenne", "Biodiversité", "Environnement", "Transition Verte"],
+    gallery: [
+      "/visuels/union-europeenne/union-europeenne-copie-01.jpg",
+      "/visuels/union-europeenne/union-europeenne-copie-0w1-01.jpg"
+    ]
+  },
+  {
     id: "independance",
-    title: "Indépendance Guinée — AGL",
-    category: "Scénographie 3D & Campagne Nationale",
+    title: "AGL — Conakry Terminal",
+    category: "Identité Événementielle & Social Media • Campagne des 68 ans de la Guinée (AGL - Conakry Terminal)",
     categoryKey: "campagnes",
     client: "Africa Global Logistics (AGL)",
     year: "2024",
-    desc: "Direction artistique et conception de la scénographie commémorative pour l'Indépendance de la Guinée. Découpe 3D du logo monumental, habillage événementiel de site et visuels d'affichage d'envergure.",
+    desc: "Direction artistique, campagne commémorative des 68 ans de la Guinée et conception de la scénographie événementielle pour Africa Global Logistics (AGL - Conakry Terminal). Découpe 3D du logo monumental, habillage événementiel de site et visuels d'affichage d'envergure.",
     image: "/visuels/independance/agl-main.jpg",
-    tags: ["Scénographie 3D", "Événementiel", "AGL", "Campagne Nationale"],
+    tags: ["Scénographie 3D", "Événementiel", "AGL", "Campagne Nationale", "Social Media"],
     gallery: [
       "/visuels/independance/agl-main.jpg",
       "/visuels/independance/decoup-3d-logo.jpg",
@@ -42,20 +222,18 @@ const projects: Project[] = [
     ]
   },
   {
-    id: "miss-guinee",
-    title: "Miss Guinée",
-    category: "Identité de Marque & Événementiel",
-    categoryKey: "branding",
-    client: "Comité National Miss Guinée",
+    id: "1xbet",
+    title: "1xBet & Bet224 Conakry",
+    category: "Affiches en Agence (1xBet & Bet224 Conakry)",
+    categoryKey: "campagnes",
+    client: "1xBet & Bet224 Conakry",
     year: "2024",
-    desc: "Création du logotype officiel, charte graphique prestigieuse et direction visuelle des affichages événementiels pour l'élection Miss Guinée. Déclinaisons en bâches géantes et habillages scéniques.",
-    image: "/visuels/miss-guinnee/410x290cm.jpg",
-    tags: ["Logotype", "Charte Graphique", "Événementiel", "Prestige"],
+    desc: "Conception et direction artistique des affiches publicitaires grand format et habillages de vitrines d'agences pour les leaders des paris sportifs 1xBet et Bet224 à Conakry.",
+    image: "/visuels/1xbet/1xbet-guinee-01.jpg",
+    tags: ["Affichage Agence", "1xBet", "Bet224", "Sport & Betting"],
     gallery: [
-      "/visuels/miss-guinnee/410x290cm.jpg",
-      "/visuels/miss-guinnee/43x26cm.jpg",
-      "/visuels/miss-guinnee/bache-candidates.jpg",
-      "/visuels/miss-guinnee/dos-chapiteau-3145x1200-cm.jpg"
+      "/visuels/1xbet/1xbet-guinee-01.jpg",
+      "/visuels/1xbet/bet-224-01.jpg"
     ]
   },
   {
@@ -66,47 +244,11 @@ const projects: Project[] = [
     client: "Agence Indigo — Conakry",
     year: "2025–2026",
     desc: "Direction artistique globale et déploiement de marque pour l'agence Indigo. Conception du système graphique, habillage façades, panneaux déroulants et supports grand format.",
-    image: "/visuels/indigo/deroulant.jpg",
+    image: "/visuels/indigo/facade-ramadan-3_.jpg",
     tags: ["Direction Artistique", "Identité Visuelle", "Print Grand Format", "Conakry"],
     gallery: [
-      "/visuels/indigo/deroulant.jpg",
-      "/visuels/indigo/panneau-deroulant.jpg",
-      "/visuels/indigo/grande-facade-la-rntree_.jpg",
-      "/visuels/indigo/sucette.jpg"
-    ]
-  },
-  {
-    id: "presidentielle",
-    title: "Campagne Présidentielle",
-    category: "Communication Stratégique & Affichage",
-    categoryKey: "campagnes",
-    client: "Campagne Électorale",
-    year: "2024",
-    desc: "Direction graphique et conception des visuels d'affichage urbain grand format, totems signalétiques et supports de mobilisation pour une campagne électorale d'envergure nationale.",
-    image: "/visuels/campagne-presidentielle/entree-01.jpg",
-    tags: ["Communication Politique", "Affichage Urbain", "Totems", "Stratégie"],
-    gallery: [
-      "/visuels/campagne-presidentielle/entree-01.jpg",
-      "/visuels/campagne-presidentielle/entree-03.jpg",
-      "/visuels/campagne-presidentielle/totem-copie-01.jpg",
-      "/visuels/campagne-presidentielle/totem-copie-02.jpg"
-    ]
-  },
-  {
-    id: "carrefour",
-    title: "Carrefour Marché",
-    category: "Retail & Campagne Commerciale",
-    categoryKey: "packaging",
-    client: "Carrefour Bénin",
-    year: "2023",
-    desc: "Campagne promotionnelle et habillage visuel du réseau de supermarchés Carrefour. Affiches 4x3m, kakemonos intérieurs, animations commerciales et PLV.",
-    image: "/visuels/carrefour-/visuel.jpg",
-    tags: ["Retail", "Publicité", "Affichage 4x3", "PLV"],
-    gallery: [
-      "/visuels/carrefour-/visuel.jpg",
-      "/visuels/carrefour-/votre-super-marche.jpg",
-      "/visuels/carrefour-/marchandise.jpg",
-      "/visuels/carrefour-/300cmx-400cm.jpg"
+      "/visuels/indigo/facade-ramadan-3_.jpg",
+      "/visuels/indigo/facade-ramadan_plan-de-travail-1-copie-2.jpg"
     ]
   },
   {
@@ -139,6 +281,22 @@ const projects: Project[] = [
       "/visuels/la-banque-islamique/big_plan-de-travail-1.jpg",
       "/visuels/la-banque-islamique/big_plan-de-travail-1-copie.jpg",
       "/visuels/la-banque-islamique/big_plan-de-travail-1-copie-2.jpg"
+    ]
+  },
+  {
+    id: "suir-immobilier",
+    title: "Suir Immobilier",
+    category: "Identité de Marque & Totem Signalétique",
+    categoryKey: "branding",
+    client: "Suir Immobilier",
+    year: "2024",
+    desc: "Conception du logotype et du totem signalétique extérieur pour l'agence immobilière Suir Immobilier.",
+    image: "/visuels/suir-immobilier/totem-ai-plan-de-travail-1.jpg",
+    tags: ["Logo", "Signalétique", "Totem", "Immobilier"],
+    gallery: [
+      "/visuels/suir-immobilier/totem-ai-plan-de-travail-1.jpg",
+      "/visuels/suir-immobilier/logo-plan-de-travail-1.jpg",
+      "/visuels/suir-immobilier/whatsapp-image-2026-10-13-at-15-50-58.jpg"
     ]
   }
 ];
@@ -216,7 +374,7 @@ export default function Work() {
                 className={`relative overflow-hidden px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-[13px] font-bold transition-all duration-300 cursor-pointer select-none flex items-center gap-2 ${
                   isActive
                     ? "text-white bg-gradient-to-r from-[#7C3AED] via-[#8B5CF6] to-[#7C3AED] border-t border-white/45 border-b border-black/35 shadow-[0_8px_25px_rgba(124,58,237,0.5),inset_0_1px_1px_rgba(255,255,255,0.6)]"
-                    : "bg-white/90 dark:bg-[#16152B]/85 text-[#57556E] dark:text-[#8888A4] hover:text-[#11111B] dark:hover:text-white border border-black/10 dark:border-white/[0.12] hover:border-[#7C3AED]/50 shadow-sm backdrop-blur-md"
+                    : "bg-white/95 dark:bg-[#1E1C38] text-[#11111B] dark:text-white hover:text-[#7C3AED] dark:hover:text-[#A78BFA] border border-black/15 dark:border-white/20 hover:border-[#7C3AED]/60 dark:hover:border-[#8B5CF6]/60 shadow-xs backdrop-blur-md"
                 }`}
               >
                 {/* 3D Top Bevel Glint */}
