@@ -13,9 +13,9 @@ export default function Home() {
     <main id="main-content" className="bg-[var(--background)] selection:bg-[#7C3AED] dark:selection:bg-[#8B5CF6] selection:text-white min-h-screen relative text-[var(--foreground)] transition-colors duration-300">
       <Navbar />
       <Hero />
+      <Work />
       <Stats />
       <Skills />
-      <Work />
       <About />
       <FAQ />
       <Contact />
