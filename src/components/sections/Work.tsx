@@ -15,6 +15,7 @@ interface Project {
   year: string;
   desc: string;
   image: string;
+  imagePosition?: string;
   tags: string[];
   gallery: string[];
 }
@@ -47,6 +48,7 @@ const projects: Project[] = [
     year: "2024",
     desc: "Création de l'univers visuel et des supports de communication pour le lancement historique du tout premier supermarché Carrefour Market Guinee en République de Guinée. Un projet d'envergure marquant une nouvelle ère pour la grande distribution moderne et la valorisation du contenu local à Conakry.",
     image: "/visuels/carrefour-/img-0526.jpg",
+    imagePosition: "object-top",
     tags: ["Retail", "Lancement Historique", "Affichage Urbain", "Conakry", "PLV"],
     gallery: [
       "/visuels/carrefour-/img-0526.jpg",
@@ -91,6 +93,7 @@ const projects: Project[] = [
     year: "2024",
     desc: "Conception du logotype commémoratif officiel des 68 ans d’Indépendance de la République de Guinée et modélisation pour découpe volumique 3D. Réalisation sur mesure en enseigne lumineuse rétroéclairée et habillage scénique monumental célébrant l'histoire, la jeunesse et les bâtisseurs de la nation.",
     image: "/visuels/independance/photo-realisation-1.jpg",
+    imagePosition: "object-[center_35%]",
     tags: ["Logotype Officiel", "Découpe 3D", "Enseigne Lumineuse", "Identité Nationale", "Guinée"],
     gallery: [
       "/visuels/independance/decoup-3d-logo.png",
@@ -426,7 +429,7 @@ export default function Work() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  className={`w-full h-full object-cover ${project.imagePosition || "object-center"} group-hover:scale-105 transition-transform duration-500`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
                 
